@@ -23,5 +23,8 @@ const dlMoment = moment.tz(plainDate, timezone).set({
   minute: 30
 });
 const dlDateFns = utcToZonedTime(plainDate, timezone);
-const dlDateFnsSet = set(dlDateFns, { hours: 12, minutes: 30 });
+const dlDateFnsSet = set(dlDateFns, {
+  hours: 12,
+  minutes: 30
+});
 console.log(formatISO(dlDateFnsSet) === dlMoment.format()); // -> true
